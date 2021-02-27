@@ -21,7 +21,8 @@ let appxml = express()
 appxml.use(bodyParser.json());
 appxml.use(cookieParser());
 appxml.use(cors({
-    origin: '*',
+    origin: ["http://localhost:3000", 'https://databaselogin.herokuapp.com/'],
+    // origin: '*',
     credentials: true
 }));
 appxml.use(morgan('dev'));

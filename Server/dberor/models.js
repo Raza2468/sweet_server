@@ -79,6 +79,20 @@ var picSchema = new mongoose.Schema({
     
 });
 var profilepic = mongoose.model("pic", picSchema);
+// ======================>
+
+var collection = mongoose.Schema({
+    cart: Array,
+    total: String,
+    userEmail: String,
+    status: String,
+    phoneNo: String,
+    address: String,
+    remarks: String,
+    "createdOn": { "type": Date, "default": Date.now },
+})
+
+var order = mongoose.model("order", collection);
 
 // =======================export
 
@@ -87,4 +101,5 @@ module.exports = {
     otpModel: otpModel,
     tweet:tweet,
     profilepic:profilepic,
+    order: order,
 }

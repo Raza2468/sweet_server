@@ -4,44 +4,41 @@ import './Headermobile.css'
 import { Link } from 'react-router-dom'
 import ReactDOM from 'react-dom';
 import FadeMenu from './menu'
-import  Signup from '../foam/Signup'
+import Signup from '../foam/Signup'
 // import Button from '@material-ui/core/Button';
 // import Menu from '@material-ui/core/Menu';
 // import MenuItem from '@material-ui/core/MenuItem';
 
 
 // import React, { Component } from 'react';
-const  Header =()=> {
-   
-        return (
-            <div className="header fixed flex aic">
-                <div className="logo"><a href="#"><img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sweet-candy-logo.png" height="50px" width="60px" /></a> </div>
-                
-                <div className="location rel flex aic">
-                    <div className="fa fa-search ico s24" />
-                    <input className="lable" placeholder="your location" value="Pakistan" />
-                    <FadeMenu />
-                </div>
+const Header = () => {
 
-                <div className="search flex aic">
-                    <input placeholder="Find Cars, Moble Phone and More..." className="query" />
-                    <button className="fa fa-search ico s24 go cfff"></button>
-                </div>
+    return (
+        <div className="header fixed flex aic">
+            <div className="logo"><a href="#"><img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sweet-candy-logo.png" height="50px" width="60px" /></a> </div>
 
-                <div className="actions flex aic">
-                    <button className="login s15" > 
-                    {/* <Signup /> */}
-                    Login</button>
-                    
-                    <button className="sell color flex aic">
-                        <div className="fa fa-plus ico "></div>
-                        <h4 className="s16 fontb ">Sell</h4>
-                    </button>
-                </div>
+            <div className="location rel flex aic">
+                <div className="fa fa-search ico s24" />
+                <input className="lable" placeholder="your location" value="Pakistan" />
+                <FadeMenu />
             </div>
 
-        )
-    
+            <div className="search flex aic">
+                <input placeholder="Find Cars, Moble Phone and More..." className="query" />
+                <button className="fa fa-search ico s24 go cfff"></button>
+            </div>
+
+            <div className="actions flex aic">
+                <Link to="./Login"><button className="login s15" >Login</button></Link>
+                <button className="sell color flex aic">
+                    <div className="fa fa-plus ico "></div>
+                    <h4 className="s16 fontb ">Sell</h4>
+                </button>
+            </div>
+        </div>
+
+    )
+
 }
 
 class Media extends React.Component {
